@@ -3,6 +3,7 @@ A script that will rotate Databricks tokens.  This script will allow you to rota
 
 ## See the script for the documentation
 The script includes step by step instructions.
+https://github.com/AdamPaternostro/Azure-Databricks-Token-Rotation/blob/master/Databricks-Token-Rotation.sh
 
 
 ## The Developer's can then access their Databricks token
