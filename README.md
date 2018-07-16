@@ -1,5 +1,5 @@
 # Azure-Databricks-Token-Rotation
-A script that will rotate Databricks tokens.  This script will allow you to rotate the tokens that developers use when accessing Azure Databricks.  
+A script that will rotate Databricks tokens.  When running jobs in Databricks, you need a token.  You should create a "job" user account (e.g. Azure AD account) and use this script to rotate the tokens under that account.
 
 ## See the script for the documentation
 The script includes step by step instructions.
