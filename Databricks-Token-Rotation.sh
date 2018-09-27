@@ -10,7 +10,7 @@
 #   We will have two developer tokens.  One is the one that is currently in use.
 #   We need to keep the one that is in use and then generate a second one.
 #   The second one will be used to update the developer's KeyVault.  
-#   When new code isrun it will use the new token.  
+#   When new code is run it will use the new token.  
 #   The prior token will be slowly deprecated (and deleted the next time this script is run).
 # NOTE: Running this script twice in a row will generate two new developer tokens and delete the "current in use" one.
 #       You should run this script every {x} days based upon how often your code retreieves a new token.
