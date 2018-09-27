@@ -5,6 +5,11 @@ A script that will rotate Databricks tokens.  When running jobs in Databricks, y
 The script includes step by step instructions.
 https://github.com/AdamPaternostro/Azure-Databricks-Token-Rotation/blob/master/Databricks-Token-Rotation.sh
 
+The basics:
+* You will have a key vault for IT admins (this will contain a Databricks token for Admin access to Databricks).  We do not want developers in here.
+* You will have a key vault for Developers (this will contain the most recent Databricks token for Developers to access Databricks).  The key vault will aslo store the "id" of this latest token.
+* In Databricks under the Admin account you will have a single token (this gets rotated everytime the script runs)
+* In Databricks under the Developer account, you will have two tokens.  One of the tokens will be the "lastest" and will be in key vault (along with its id).  The other token will be prior-latest token (this token should be "draining" from use).  We cannot immediately delete the prior-latest token since stuff might break, so we create a new token (aka latest), leave the old one around to drain (aka prior-latest) and delete all other tokens (prior-prior-latest and such).
 
 ## The Developer's can then access their Databricks token
 1 - The can use a service princple (login to Azure) and then call KeyVault
